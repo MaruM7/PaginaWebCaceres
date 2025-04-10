@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de Cáceres</title>
+    <link rel="stylesheet" href="estiloshistoria.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="museo.html">Visita</a></li>
+                    <li><a href="contacto2.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar-container">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button onclick="highlightSearch()">Buscar</button>
+            </div>
+            <script>
+                function highlightSearch() {
+                    const query = document.getElementById('search-input').value.toLowerCase();
+                    const bodyText = document.body.innerHTML;
+                    const highlightedText = bodyText.replace(new RegExp(query, 'gi'), match => `<mark>${match}</mark>`);
+                    document.body.innerHTML = highlightedText;
+                }
+            </script>
+        </div>
+    </header>
+
+    <main class="main-content historia">
+        <div class="language-selector">
+            <label for="idioma">Idioma:</label>
+            <select id="idioma" name="idioma">
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+            </select>
+        </div>
+        <div class="title">Historia de Cáceres</div>
+        <div class="subtitle">Una ciudad con siglos de historia</div>
+
+        <div class="content-wrapper">
+            <div class="text-block">
+                <p>Cáceres, declarada Patrimonio de la Humanidad por la UNESCO, es una joya medieval que combina influencias romanas, musulmanas, judías y cristianas. Su casco histórico es uno de los más completos y mejor conservados de Europa, con callejuelas empedradas, palacios renacentistas y torres defensivas que narran siglos de historia.</p>
+                <p>La ciudad ha sido habitada desde tiempos prehistóricos, con restos del Paleolítico, y tuvo un gran auge durante la dominación romana y musulmana. Hoy, Cáceres es un símbolo de la convivencia de culturas y un destino imprescindible para los amantes de la historia.</p>
+                <a class="btn-historia" href="https://turismo.caceres.es/es/contenido/historia-de-caceres" target="_blank">Leer historia completa</a>
+            </div>
+
+            <div class="images-column">
+                <img src="img/torrebujaco.jpg" alt="Plaza Mayor de Cáceres" class="image-history">
+                <img src="img/museodecaceres.jpg" alt="Arco de la Estrella" class="image-history">
+                <img src="img/iglesiafranciscojavier.jpg" alt="Concatedral de Santa María" class="image-history">
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Descubre Cáceres y déjate conquistar por su historia.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/Ayuntamiento.de.Caceres/?locale=es_ES" target="_blank"><img src="img/facebook2-removebg-preview.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/ayto_caceres/?hl=es" target="_blank"><img src="img/instagram-removebg-preview.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>

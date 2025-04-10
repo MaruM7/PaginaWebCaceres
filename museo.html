@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visita al Museo Helga de Cáceres</title>
+    <link rel="stylesheet" href="estilosautobusss.css"> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="museo.html" class="active">Visita</a></li>
+                    <li><a href="contacto2.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar-container">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button onclick="highlightSearch()">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="language-selector">
+            <label for="idioma">Idioma:</label>
+            <select id="idioma" name="idioma">
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+            </select>
+        </div>
+        <div class="title">Museo Helga de Cáceres</div>
+        <div class="subtitle">Descubre la historia y las exposiciones del Museo Helga de Cáceres</div>
+        
+        <div class="content-wrapper">
+            
+            <div class="image-row">
+                <div class="card">
+                    <img src="img/museoexpo.jpg" alt="Exposición del Museo">
+                    <h3>Exposiciones Permanentes</h3>
+                    <p>Visita nuestras exposiciones permanentes que muestran una increíble colección de arte y cultura.</p>
+                </div>
+                <div class="card">
+                    <img src="img/museointeract.jpeg" alt="Interactividad del Museo">
+                    <h3>Experiencia Interactiva</h3>
+                    <p>Disfruta de una experiencia interactiva única que te conecta con el arte de una manera nueva.</p>
+                </div>
+                <div class="card">
+                    <img src="img/libros.jpg" alt="Tienda del Museo">
+                    <h3>Tienda del Museo</h3>
+                    <p>Encuentra recuerdos y objetos exclusivos del museo en nuestra tienda.</p>
+                </div>
+            </div>
+            
+    </main>
+
+    <footer class="footer">
+        <p>Ven y conoce la historia en el Museo Helga de Cáceres.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/MuseoHelgadeAlvear/?locale=es_ES" target="_blank"><img src="img/facebook2-removebg-preview.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/museohelgadealvear/?hl=es" target="_blank"><img src="img/instagram-removebg-preview.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script>
+        function highlightSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const bodyText = document.body.innerHTML;
+            const highlightedText = bodyText.replace(new RegExp(query, 'gi'), match => `<mark>${match}</mark>`);
+            document.body.innerHTML = highlightedText;
+        }
+    </script>
+</body>
+</html>

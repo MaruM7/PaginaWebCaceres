@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Cáceres</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="museo.html">Visita</a></li>
+                    <li><a href="contacto2.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-bar-container">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button onclick="highlightSearch()">Buscar</button>
+            </div>
+
+            <script>
+                function highlightSearch() {
+                    const query = document.getElementById('search-input').value.toLowerCase();
+                    const bodyText = document.body.innerHTML;
+                    const highlightedText = bodyText.replace(new RegExp(query, 'gi'), match => `<mark>${match}</mark>`);
+                    document.body.innerHTML = highlightedText;
+                }
+            </script>
+
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="language-selector">
+            <label for="idioma">Idioma:</label>
+            <select id="idioma" name="idioma">
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+            </select>
+        </div>
+
+        <div class="title">Bienvenidos a Cáceres</div>
+        <div class="subtitle">Descubre la magia de su casco histórico</div>
+
+        <div class="image-row">
+            <div class="card">
+                <a href="https://turismo.caceres.es/es/recurso-poi/plaza-mayor" target="_blank">
+                    <img src="img/plazamayor.jpg" alt="Plaza Mayor de Cáceres">
+                </a>
+                <h3>Plaza Mayor</h3>
+            </div>
+
+            <div class="card">
+                <a href="https://concatedralcaceres.com" target="_blank">
+                    <img src="img/concatedral.jpg" alt="Concatedral de Santa María">
+                </a>
+                <h3>Concatedral de Santa María</h3>
+            </div>
+
+            <div class="card">
+                <a href="https://turismo.caceres.es/es/recurso-poi/arco-de-la-estrella" target="_blank">
+                    <img src="img/arco de la estrella.jpg" alt="Arco de la Estrella">
+                </a>
+                <h3>Arco de la Estrella</h3>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Explora Cáceres y déjate maravillar por su historia.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/Ayuntamiento.de.Caceres/?locale=es_ES" target="_blank"><img src="img/facebook2-removebg-preview.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/ayto_caceres/?hl=es" target="_blank"><img src="img/instagram-removebg-preview.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>
