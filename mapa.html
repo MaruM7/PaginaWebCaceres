@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa del sitio | Cáceres</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mapa.css">
+    <link rel="icon" type="image/png" href="img/ESCUDOFAVICON.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <nav class="menu" aria-label="Menú principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="museo.html">Visita</a></li>
+                    <li><a href="contacto2.html">Contacto</a></li>
+                    <li><a href="mapa.html" class="active">Mapa</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar-container">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button onclick="highlightSearch()">Buscar</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="site-map">
+            <h2>Mapa de la Página Web</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia</a>
+                    <ul>
+                        <li>Imágenes y descripciones históricas</li>
+                        <li>Vídeo de Cáceres</li>
+                        <li>Audio guía</li>
+                    </ul>
+                </li>
+                <li><a href="museo.html">Visita</a>
+                    <ul>
+                        <li>Exposiciones permanentes</li>
+                        <li>Experiencia interactiva</li>
+                        <li>Tienda del museo</li>
+                    </ul>
+                </li>
+                <li><a href="contacto2.html">Contacto</a>
+                    <ul>
+                        <li>Formulario de contacto</li>
+                    </ul>
+                </li>
+                <li><a href="mapa.html">Mapa del sitio (este esquema)</a></li>
+            </ul>
+        </div>
+    </main>
+   <footer class="footer">
+        <p>Explora Cáceres y déjate maravillar por su historia.</p>
+        <a href="https://marum7.github.io/PaginaWebCaceres/">Pagina Caceres</a> © 2025 by <a href="https://github.com/MaruM7">Marouan</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Atribución">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="Compartir Igual">
+        <div class="social-media">
+            <a href="https://www.facebook.com/Ayuntamiento.de.Caceres/?locale=es_ES" target="_blank"><img src="img/facebook2-removebg-preview.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/ayto_caceres/?hl=es" target="_blank"><img src="img/instagram-removebg-preview.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    <script>
+        function highlightSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const bodyText = document.body.innerHTML;
+            const highlightedText = bodyText.replace(new RegExp(query, 'gi'), match => `<mark>${match}</mark>`);
+            document.body.innerHTML = highlightedText;
+        }
+    </script>
+</body>
+</html>

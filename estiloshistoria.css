@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f7f4e9;
+}
+
+.header {
+    background-color: #0056A6;
+    width: 100%;
+    padding: 10px 10px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.menu {
+    margin-top: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    padding: 5px 20px;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #001A3A;
+}
+
+.menu ul li a:hover {
+    background-color: #D99E2B;
+    color: #fff;
+}
+
+.escudo-header {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.escudo-header img {
+    height: 100%;
+    width: auto;
+}
+
+.main-content.historia {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background: url('img/parchment_texture.jpg') center/cover no-repeat;
+    color: #4A4A4A;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.title {
+    color: #0056A6;
+    font-size: 64px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #001A3A;
+    margin-bottom: 30px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    max-width: 95%;
+    max-height: 95%;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.text-block {
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 750px;
+    overflow: auto;
+}
+
+.text-block p {
+    text-indent: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.images-column {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 750px;
+    margin-bottom: 20px;
+}
+
+.image-history {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-historia {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #D99E2B;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-historia:hover {
+    background-color: #001A3A;
+}
+
+.footer, .footer p, .cc-block {
+    color: #fff;
+}
+
+.footer {
+    background-color: #0056A6;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+.footer p {
+    margin: 0;
+    flex: 1;
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.social-media img {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar-container input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+}
+
+.search-bar-container button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    background-color: #D99E2B;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-bar-container button:hover {
+    background-color: #001A3A;
+}
+
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.language-selector label {
+    margin-right: 5px;
+    font-size: 14px;
+    color: #000;
+}
+
+.language-selector select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cc-block a,
+.footer a {
+    color: #FFD700;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.cc-block a:visited,
+.footer a:visited {
+    color: #FFD700;
+}
+.cc-block a:focus,
+.cc-block a:hover,
+.footer a:focus,
+.footer a:hover {
+    color: #fff200;
+    outline: 2px solid #FFD700;
+    outline-offset: 2px;
+}
+
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 2px solid #FFD700;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .image-row, .form-grid, .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .card, .table-container, .text-block {
+        width: 90%;
+    }
+
+    .card img, .image-history {
+        height: 250px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .footer p {
+        font-size: 16px;
+    }
+
+    .social-media img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .language-selector {
+        position: static;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: 45%;
+    }
+
+    .image-row {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .text-block {
+        font-size: 16px;
+    }
+}
